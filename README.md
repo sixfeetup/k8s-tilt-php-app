@@ -50,6 +50,8 @@ chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 ```
 
+Other tools could be used instead of Kind, to setup a local cluster. For example, check how you can deploy Kubernetes with the Docker Desktop for Windows/Mac on https://docs.docker.com/desktop/kubernetes/
+
 ## Tilt
 Tilt is the tool that will handle deployments for us (build containers, deploy to cluster, sync code changes), install following instructions on https://docs.tilt.dev/install.html
 
@@ -72,7 +74,7 @@ Then start Tilt
 ```
 tilt up
 ```
-We hit `space` and this is starting a nice dashboard on our browser. After a few seconds, where the app is built, we can see the sample application running on the browser, on http://localhost:8000/
+We hit `space` and this is starting the nice dashboard of Tilt on our browser. We click the Details view and choose Laravel, and see how the application is building. After 1-2 minutes the app informs us that it is ready on http://localhost:8000/
 
 
 We can perform changes to the code, for example edit file `welcome.blade.php`. After a few seconds if we refresh the browser, we will see the changes reflected.
